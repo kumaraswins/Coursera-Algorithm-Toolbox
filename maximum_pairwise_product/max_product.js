@@ -1,4 +1,4 @@
-
+//nodejs
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -16,23 +16,14 @@ function readLine (line) {
     console.log(max(arr));
     process.exit();
 }
-function max(arr) {
-    // write your code here
-    var max_index_1,
-         max_index_2;
-    max_index_1 = max_index_2 = -1
-    for(var i=0;i<arr.length;i++){
-        if (max_index_1 == -1 || (arr[i] > arr[max_index_1])){
-            max_index_1 = i
-        }
-    }
 
-    for(var i=0;i<arr.length;i++){
-        if ((i != max_index_1) && (max_index_2 == -1  || arr[i] > arr[max_index_2])){
-            max_index_2 = i
+max_product =0
+function max(arr){
+    const n =  arr.length;
+    for (var first = 0;first < n;first++){
+        for(var second=first+1;second<n;second++){
+            max_product = Math.max(max_product, arr[first]* arr[second])
         }
     }
-    return(arr[max_index_1]*arr[max_index_2]);
+    return max_product;
 }
-
-module.exports = max;
