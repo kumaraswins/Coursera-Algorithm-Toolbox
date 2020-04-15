@@ -17,7 +17,6 @@ function readLine (line) {
     process.exit();
 }
 function max(arr) {
-    // write your code here
     var max_index_1,
          max_index_2;
     max_index_1 = max_index_2 = -1
