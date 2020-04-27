@@ -1,5 +1,4 @@
 #python3
-
 n = int(input())
 arr = [int(a) for a in input().split()]
 max_product = 0
